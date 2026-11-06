@@ -1,0 +1,27 @@
+[project]
+name = "ome-render"
+version = "0.1.0"
+description = "FastAPI backend rendering OME-TIFF and OME-Zarr images as composited images"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "numpy",
+    "pillow",
+    "tifffile",
+    "zarr",
+    "imagecodecs",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
